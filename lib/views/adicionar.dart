@@ -1,6 +1,5 @@
 import 'package:financas/services/financas_service.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_multi_formatter/flutter_multi_formatter.dart';
 
 class Adicionar extends StatefulWidget {
@@ -22,7 +21,7 @@ class _AdicionarState extends State<Adicionar> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(120),
+        padding: EdgeInsets.all(10),
         child: Card(
           child: Padding(
             padding: EdgeInsets.fromLTRB(80, 20, 80, 50),
