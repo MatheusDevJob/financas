@@ -20,12 +20,12 @@ class _AdicionarState extends State<Adicionar> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.all(120),
         child: Card(
           child: Padding(
-            padding: EdgeInsets.fromLTRB(80, 20, 80, 20),
+            padding: EdgeInsets.fromLTRB(80, 20, 80, 50),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [

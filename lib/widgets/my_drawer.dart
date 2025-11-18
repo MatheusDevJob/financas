@@ -18,8 +18,8 @@ class MyDrawer extends StatelessWidget {
                 "https://a.storyblok.com/f/178900/1504x846/2a6685e7ed/sword-art-online-episode-13-kirito.jpg/m/1200x0/filters:quality(95)format(webp)",
               ),
             ),
-            accountName: Text("Matheus Henrique"),
-            accountEmail: Text("mhop.developer@gmail.com"),
+            accountName: Text(PrefService().globalNome ?? ""),
+            accountEmail: Text(PrefService().globalEmail ?? ""),
             otherAccountsPictures: [
               IconButton(
                 icon: const Icon(Icons.logout, color: Colors.white),
@@ -38,7 +38,7 @@ class MyDrawer extends StatelessWidget {
           //   childrenPadding: EdgeInsets.only(left: 10),
           //   children: [
           ListTile(
-            leading: const Icon(Icons.arrow_right),
+            leading: const Icon(Icons.account_balance_wallet_outlined),
             title: const Text("Finanças"),
             onTap: () async {
               final router = GoRouter.of(context);
@@ -54,6 +54,24 @@ class MyDrawer extends StatelessWidget {
                 context.push('/financas', extra: dados);
               }
             },
+          ),
+
+          ListTile(
+            leading: const Icon(Icons.category_outlined),
+            onTap: () => context.push('/categoria'),
+            title: const Text("Categoria"),
+          ),
+
+          ListTile(
+            leading: const Icon(Icons.account_balance_outlined),
+            onTap: () => context.push('/conta'),
+            title: const Text("Conta"),
+          ),
+
+          ListTile(
+            leading: const Icon(Icons.credit_card),
+            onTap: () => context.push('/formaPagamento'),
+            title: const Text("Formas de Pagamento"),
           ),
 
           //   ],

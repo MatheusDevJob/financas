@@ -94,7 +94,11 @@ class _FinancasState extends State<Financas> {
       body: corpo[paginaAtual],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: paginaAtual,
-        onTap: (value) => setState(() => paginaAtual = value),
+        onTap: (value) {
+          if (paginaAtual == value) return;
+
+          setState(() => paginaAtual = value);
+        },
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.history),

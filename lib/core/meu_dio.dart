@@ -4,6 +4,7 @@ import 'package:financas/services/pref_service.dart';
 class MeuDio {
   static final Dio instance = Dio(
       BaseOptions(
+        // baseUrl: 'https://financas.thebots.com.br/api',
         baseUrl: 'http://localhost:1212/api',
         validateStatus: (status) {
           // aqui vale pra TODAS as requisições

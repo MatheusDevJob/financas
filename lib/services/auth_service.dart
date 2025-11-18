@@ -15,6 +15,8 @@ class AuthService {
         return {'ok': false, 'msg': r.data['msg'] ?? "Erro interno"};
       }
       await PrefService().setToken(r.data['token']);
+      await PrefService().setEmail(r.data['user']['email']);
+      await PrefService().setNome(r.data['user']['nome']);
       return r.data;
     } catch (e) {
       return {"ok": false, "msg": e.toString()};
